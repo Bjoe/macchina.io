@@ -19,6 +19,8 @@
 				include/IoT/Devices/LED.h
 				include/IoT/Devices/BarcodeReader.h
 				include/IoT/Devices/Switch.h
+				include/IoT/Devices/SwitchBinary.h
+				include/IoT/Devices/Basic.h
 			</include>
 			<exclude>
 			</exclude>

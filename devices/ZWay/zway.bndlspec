@@ -1,0 +1,27 @@
+<bundlespec>
+	<manifest>
+    <name>macchina.io ZWay</name>
+    <symbolicName>io.macchina.zway</symbolicName>
+    <version>2.1.2</version>
+    <vendor>Z-Wave.Me</vendor>
+    <copyright>Z-Wave.Me</copyright>
+		<activator>
+      <library>io.macchina.zway</library>
+		</activator>
+		<lazyStart>false</lazyStart>
+		<runLevel>610</runLevel>
+	</manifest>
+	<code>
+		lib/*.so,
+		lib/*.so.*,
+		bin/*.dll,
+		bin/*.pdb,
+		bin/${osName}/${osArch}/*.so,
+		bin/${osName}/${osArch}/*.dylib,
+        ../lib/${osName}/${osArch}/libIoTZWay*.1.dylib,
+        ../lib/${osName}/${osArch}/libIoTZWay*.so.1
+	</code>
+	<files>
+		bundle/*
+	</files>
+</bundlespec>

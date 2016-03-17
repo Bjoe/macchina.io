@@ -15,65 +15,43 @@ macchina.io is based on the [POCO C++ Libraries](http://pocoproject.org) and
 uses the [V8 JavaScript engine](https://code.google.com/p/v8/).
 
 For more information, including documentation, please see the 
-[macchina.io website](http://macchina.io).
+[macchina.io website](http://macchina.io) or see original repo
+[macchina.io github](https://github.com/macchina-io/macchina.io)
 
 
-Build Status
-------------
+Z-Wave (ALPHA) support
+-----------------------
 
-- Travis: [![Travis Build Status](https://travis-ci.org/macchina-io/macchina.io.png?branch=develop)](https://travis-ci.org/macchina-io/macchina.io/)
+Following OSGi bundles implements Z-Wave support: 
+ * io.macchina.zway
+ * io.macchina.zwave
+ * io.macchina.zwave.devices
+ * io.macchina.webui.zwave
+ 
+The Z-Wave protocol is implemented in io.macchina.zwave. At the moment there
+are only following Z-Wave command classes are implemented:
+ * Basic command class (default for all Z-Wave nodes)
+ * Meter command class (for sensor devices)
+ * SwitchBinary command class
+ 
+To use Z-Wave, a controller and thirdparty Libraries are needed. 
+The OSGi bundle io.macchina.zway has support for Z-Way Z-Wave Controller 
+from [Z-Wave.me](http://www.zwave.me). See:
+ * [RaZberry - for Raspberry PI platform](http://razberry.z-wave.me/)
+ * [UZBWAY - USB Stick](http://www.zwave.me/index.php?id=28)
 
+Download the latest tarball from [Z-Wave.me](http://razberry.zwave.me/z-way-server/)
+Extract the tarball.
+Copy following files and directories from z-way-server/ folder to macchina.io/:
+- z-way-server/libs/libxml2.so*    -> macchina.io/devices/ZWay/lib
+- z-way-server/libs/libzcommons.so -> macchina.io/devices/ZWay/lib
+- z-way-server/libs/libzway.so     -> macchina.io/devices/ZWay/lib
+- z-way-server/libzway/*.h         -> macchina.io/devices/ZWay/include/
+- z-way-server/ZDDX                -> macchina.io/server/zwave/ZDDX
+- z-way-server/translations        -> macchina.io/server/zwave/translations
+- z-way-server/config              -> macchina.io/server/zwave/config
 
-Prerequisites
--------------
+See also in macchina.io/devices/ZWay/README.
 
-  - GNU Make
-  - GNU C++ (g++) on Linux or Clang++ on OS X
-  - OpenSSL headers and libraries 
-  - Python (for building V8)
+This version is a proof of concept and not yet ready.
 
-
-Getting Started
----------------
-
-For the impatient, using a Linux or OS X machine:
-
-    $ git clone https://github.com/macchina-io/macchina.io.git
-    $ cd macchina.io
-    $ git checkout master
-    $ make -s -j8 DEFAULT_TARGET=shared_release
-
-Then, on Linux:
-
-    $ export LD_LIBRARY_PATH=`pwd`/platform/lib/Linux/x86_64
-    $ cd server
-    $ bin/Linux/x86_64/macchina
-  
-On OS X:
-
-    $ export DYLD_LIBRARY_PATH=`pwd`/platform/lib/Darwin/x86_64
-    $ cd server
-    $ bin/Darwin/x86_64/macchina
-  
-Then direct your favorite web browser to <http://localhost:22080> and log in with username 'admin' and password 'admin'.
-
-For more detailed instructions, including how to cross-compile for embedded Linux targets, 
-as well as an introduction to writing JavaScript code for macchina.io, see
-the [documentation](http://macchina.io/docs/index.html), specifically
-[Introduction and Overview](http://macchina.io/docs/00100-MacchinaIntroduction.html) and 
-[Getting Started with macchina.io](http://macchina.io/docs/00100-MacchinaIntroduction.html).
-
-
-Project Status
---------------
-
-macchina.io is still in development. The core platform code is done and considered stable
-(it's based on code having seen heavy production use for a few years already). Current work
-focuses on adding additional sensor, device and cloud service interfaces, as well as
-refining the existing interfaces.
-
-
-Contributions
--------------
-
-We welcome contributions! Specifically we're looking for new sensor and device implementations, as well as additional protocols. Please see our [CONTRIBUTING](https://github.com/macchina-io/macchina.io/blob/develop/CONTRIBUTING.md) document to get started.

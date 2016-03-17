@@ -1,0 +1,21 @@
+#
+# Makefile
+#
+# $Id$
+#
+# Makefile for macchina.io ZWay library
+#
+
+include $(POCO_BASE)/build/rules/global
+
+SYSLIBS += -L$(PROJECT_BASE)/devices/ZWay/lib -lzway -lzcommons -lpthread -lxml2 -lz -lm -lcrypto -larchive
+
+
+objects = Error Controller Event Basic Meter SwitchBinary Session DataHolder DataHolderEvent DataHolderFactory ZWayDataHolderEvent ZWayDataHolder ZWayController ZWayError DataUtil
+
+target         = IoTZWay
+target_version = 1
+target_libs    = PocoOSP PocoUtil PocoXML PocoFoundation
+
+include $(POCO_BASE)/build/rules/lib
+ 

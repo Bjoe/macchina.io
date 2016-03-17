@@ -23,3 +23,4 @@ clean all:
 	$(MAKE) -C GNSSTracking $(MAKECMDGOALS)
 	$(MAKE) -C MQTT $(MAKECMDGOALS)
 	$(MAKE) -C Console $(MAKECMDGOALS)
+	$(MAKE) -C Z-Wave $(MAKECMDGOALS)

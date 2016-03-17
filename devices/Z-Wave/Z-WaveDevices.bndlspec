@@ -1,0 +1,36 @@
+<bundlespec>
+	<manifest>
+		<name>macchina.io Z-Wave</name>
+		<symbolicName>io.macchina.zwave.devices</symbolicName>
+		<version>1.0.0</version>
+    <vendor></vendor>
+    <copyright></copyright>
+		<activator>
+		    <class>IoT::ZWave::Devices::BundleActivator</class>
+			<library>io.macchina.zwave.devices</library>
+		</activator>
+		<lazyStart>false</lazyStart>
+		<runLevel>610</runLevel>
+		<dependency>
+			<symbolicName>io.macchina.devices</symbolicName>
+			<version>[1.0.0, 2.0.0)</version>
+		</dependency>
+    <dependency>
+      <symbolicName>io.macchina.zwave</symbolicName>
+      <version>[1.0.0, 2.0.0)</version>
+    </dependency>
+		<dependency>
+			<symbolicName>io.macchina.zway</symbolicName>
+			<version>[2.1.0, 2.2.0)</version>
+		</dependency>
+  </manifest>
+	<code>
+		bin/*.dll,
+		bin/*.pdb,
+		bin/${osName}/${osArch}/*.so,
+    bin/${osName}/${osArch}/*.dylib
+	</code>
+	<files>
+		bundle/*
+	</files>
+</bundlespec>

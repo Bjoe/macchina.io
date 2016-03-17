@@ -1,0 +1,22 @@
+#
+# Makefile
+#
+# $Id$
+#
+# Makefile for macchina.io ZWay Bundle
+#
+
+BUNDLE_TOOL = $(POCO_BASE)/OSP/BundleCreator/$(POCO_HOST_BINDIR)/bundle
+
+include $(POCO_BASE)/build/rules/global
+
+objects = BundleActivator
+
+target         = io.macchina.zway
+target_version = 1
+target_libs    = IoTZWay PocoRemotingNG PocoOSP PocoUtil PocoXML PocoFoundation
+
+postbuild      = $(SET_LD_LIBRARY_PATH) $(BUNDLE_TOOL) -n$(OSNAME) -a$(OSARCH) -o../bundles zway.bndlspec
+
+include $(POCO_BASE)/build/rules/dylib
+ 

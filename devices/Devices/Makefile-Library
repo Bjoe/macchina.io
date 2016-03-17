@@ -85,7 +85,19 @@ objects = Device DeviceException \
 	SwitchEventDispatcher \
 	SwitchRemoteObject \
 	SwitchServerHelper \
-	SwitchSkeleton
+	SwitchSkeleton \
+	SwitchBinary \
+	ISwitchBinary \
+	SwitchBinaryEventDispatcher \
+	SwitchBinaryRemoteObject \
+	SwitchBinaryServerHelper \
+	SwitchBinarySkeleton \
+	Basic \
+	IBasic \
+	BasicEventDispatcher \
+	BasicRemoteObject \
+	BasicServerHelper \
+	BasicSkeleton
 
 target         = IoTDevices
 target_version = 1

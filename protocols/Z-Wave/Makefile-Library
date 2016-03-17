@@ -1,0 +1,22 @@
+#
+# Makefile
+#
+# $Id$
+#
+# Makefile for macchina.io ZWave library
+#
+
+include $(POCO_BASE)/build/rules/global
+
+INCLUDE += -I$(PROJECT_BASE)/devices/ZWay/include
+SYSLIBS += -L$(PROJECT_BASE)/devices/ZWay/lib -lzway -lzcommons -lpthread -lxml2 -lz -lm -lcrypto -larchive
+
+
+objects = NodesManager Service Node BaseCommandClass Basic Hail NoOperation Unknown SwitchBinary Meter Scales Scale
+
+target         = IoTZWave
+target_version = 1
+target_libs    = IoTZWay PocoOSP PocoUtil PocoXML PocoFoundation
+
+include $(POCO_BASE)/build/rules/lib
+ 

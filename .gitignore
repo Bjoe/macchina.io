@@ -114,3 +114,33 @@ cmake-build/
 # Temporary files #
 ###################
 *.bak
+
+# QtCreator generated files #
+#############################
+*.includes
+*.files
+*.config
+*.creator
+
+# ZWave third party stuff #
+###########################
+server/zwave/*
+devices/ZWay/include/CommandClassesPublic.h
+devices/ZWay/include/FunctionClassesPublic.h
+devices/ZWay/include/ZByteOperations.h
+devices/ZWay/include/ZData.h
+devices/ZWay/include/ZDataCallbackList.h
+devices/ZWay/include/ZDataDefs.h
+devices/ZWay/include/ZDataExt.h
+devices/ZWay/include/ZDataList.h
+devices/ZWay/include/ZDefsPublic.h
+devices/ZWay/include/ZErrors.h
+devices/ZWay/include/ZLog.h
+devices/ZWay/include/ZLogging.h
+devices/ZWay/include/ZMalloc.h
+devices/ZWay/include/ZMutex.h
+devices/ZWay/include/ZPlatform.h
+devices/ZWay/include/ZRelease.h
+devices/ZWay/include/ZSerialIO.h
+devices/ZWay/include/ZWayLib.h
+devices/ZWay/include/ZXmlLookup.h

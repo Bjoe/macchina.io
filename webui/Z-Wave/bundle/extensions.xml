@@ -1,0 +1,5 @@
+<extensions>
+  <extension point="io.macchina.web.launcher" title="Z-Wave Devices" path="/macchina/zwave" icon="/macchina/zwave/images/zplus.jpg" permission="bundleAdmin"/>
+  <extension point="osp.web.server.requesthandler" methods="GET,POST" path="/macchina/zwave/actions.json" class="IoT::Web::ZWave::ZWayRequestHandlerFactory" library="io.macchina.webui.zwave" allowSpecialization="owner" hidden="true"/>
+  <extension point="osp.web.server.directory" path="/macchina/zwave" resource="webapp" allowSpecialization="owner" hidden="true"/>
+</extensions>

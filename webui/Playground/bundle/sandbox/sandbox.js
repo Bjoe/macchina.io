@@ -23,3 +23,19 @@ else
 {
     logger.error('No temperature sensor found.');
 }
+
+var switchBinaryRefs = serviceRegistry.find('name =~ "io.macchina.zwave.switchbinary#*"');
+if (switchBinaryRefs.length > 1)
+{
+    var switchBinary = switchBinaryRefs[1].instance();
+    if(switchBinary.get())
+    {
+        logger.information('switch binary set Off');
+        switchBinary.setOff();
+    }
+    else
+    {
+        logger.information('switch binary set On');
+        switchBinary.setOn();
+    }
+}

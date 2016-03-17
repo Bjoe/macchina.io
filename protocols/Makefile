@@ -13,3 +13,4 @@ clean all:
 	$(MAKE) -C XBee $(MAKECMDGOALS)
 	$(MAKE) -C BtLE $(MAKECMDGOALS)
 	$(MAKE) -C WebTunnel $(MAKECMDGOALS)
+	$(MAKE) -C Z-Wave $(MAKECMDGOALS)

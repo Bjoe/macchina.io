@@ -1,0 +1,57 @@
+Language: Cpp
+
+# Indent
+IndentWidth: 4
+ContinuationIndentWidth: 4
+TabWidth: 4
+UseTab: Always
+AccessModifierOffset: -4
+NamespaceIndentation: None
+
+# Whitespace Rule 9
+KeepEmptyLinesAtTheStartOfBlocks: true
+MaxEmptyLinesToKeep: 2
+
+# Function arguments and parameters
+AlignAfterOpenBracket: DontAlign
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackParameters: false
+BinPackArguments: false
+IndentWrappedFunctionNames: false
+ExperimentalAutoDetectBinPacking: false
+
+
+# Short statements
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+
+# Braces
+BreakBeforeBraces: Custom
+BraceWrapping: !!map
+  AfterClass:      true
+  AfterControlStatement: true
+  AfterEnum:       true
+  AfterFunction:   true
+  AfterNamespace:  false
+  AfterObjCDeclaration: true
+  AfterStruct:     true
+  AfterUnion:      true
+  BeforeCatch:     true
+  BeforeElse:      true
+  IndentBraces:    false
+
+# Pointers and References Recommendation 17
+DerivePointerAlignment: true
+PointerAlignment: Left
+
+
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles:  false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
